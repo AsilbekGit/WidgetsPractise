@@ -27,6 +27,7 @@ The `CounterWidget` has a corresponding `State` class, `_CounterWidgetState`. Th
 The `_incrementCounter` method increments the `_counter` variable and updates `_incrementMessage` to indicate that the counter has been incremented. The `_resetCounter` method resets `_counter` to 0 and updates `_incrementMessage` to indicate that the counter has been reset.
 
 The `build` method of `_CounterWidgetState` returns a `Column` widget that displays the current counter, a message, and two buttons. The 'Increment' button calls `_incrementCounter` when pressed, and the 'Reset' button calls `_resetCounter` when pressed.
+I have added the shape property to the ElevatedButton.styleFrom method and used the RoundedRectangleBorder class to make the buttons rounded with a radius of 20
 
 ### greeting_message.dart
 

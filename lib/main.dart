@@ -22,11 +22,14 @@ class MyApp extends StatelessWidget {
               color: Colors.blueGrey,
             ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                GreetingMessage(),
-                SizedBox(height: 30),
+                Padding(
+                  padding: EdgeInsets.only(top: 50.0),
+                  child: GreetingMessage(),
+                ),
                 CounterWidget(),
+                SizedBox(height: 30),
               ],
             ),
           ),
@@ -55,7 +58,7 @@ class _CounterWidgetState extends State<CounterWidget> {
   void _resetCounter() {
     setState(() {
       _counter = 0;
-      _incrementMessage = 'You reset the value.';
+      _incrementMessage =  'You reset the value.';
     });
   }
 
@@ -66,7 +69,7 @@ class _CounterWidgetState extends State<CounterWidget> {
       children: <Widget>[
         Text(
           'Counter: $_counter',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold,
           color: Colors.blueAccent),
         ),
         SizedBox(height: 10),
@@ -91,7 +94,10 @@ class _CounterWidgetState extends State<CounterWidget> {
               child: Text('Reset'),
               style: ElevatedButton.styleFrom(
               primary: Colors.red,
+              shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
               ),
+            ),
             ),
           ],
         ),
